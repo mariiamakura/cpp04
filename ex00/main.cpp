@@ -22,6 +22,11 @@ int main() {
     wrongCat->makeSound();
     wrongAnimal->makeSound();
 
+    delete animal;
+    delete cat;
+    delete dog;
+    delete wrongCat;
+    delete wrongAnimal;
 
     return 0;
 }
