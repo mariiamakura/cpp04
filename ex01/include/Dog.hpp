@@ -12,8 +12,11 @@ class Dog : public Animal {
 
         void makeSound() const;
         const std::string &getType() const;
+        void printDogIdeas() const;
+        Brain *getBrain(void) const;
 
     private:
         std::string type;
         Brain *brain;
+
 };

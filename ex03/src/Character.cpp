@@ -13,7 +13,7 @@ Character::~Character() {
     for (int i = 0; i < 4; i++)
     {
         if (this->_inventory[i])
-            delete _inventory[i];
+            delete this->_inventory[i];
     }
     std::cout << "&Character& " << this->_name << " is deleted" <<std::endl;
 }
@@ -22,7 +22,11 @@ Character::Character(const Character &other) : _name(other.getName()) {
     for (int i = 0; i < 4; i++)
     {
         if ((other._inventory)[i])
+        {
             (this->_inventory)[i] = (other._inventory[i])->clone();
+        }
+        else
+            this->_inventory[i] = NULL;
     }
     std::cout << "&Character& " << this->_name << " is copied" <<std::endl;
 }

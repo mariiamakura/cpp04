@@ -35,21 +35,26 @@ int main() {
 //    delete cat;
 //    delete dog;
 
-//    const AAnimal *animals[8];
-//    for (int i = 0; i < 4; i++)
-//        animals[i] = new Dog();
-//    for (int i = 4; i < 8; i++)
-//        animals[i] = new Cat();
-//
-//    for (int i = 0; i < 8; i++)
-//        std::cout << animals[i]->getType() << std::endl;
-//
-//    for (int i = 0; i < 8; i++)
-//        delete animals[i];
+    const AAnimal *animals[8];
+    for (int i = 0; i < 4; i++)
+        animals[i] = new Dog();
+    for (int i = 4; i < 8; i++)
+        animals[i] = new Cat();
 
+    for (int i = 0; i < 8; i++)
+        std::cout << animals[i]->getType() << std::endl;
 
+    for (int i = 0; i < 8; i++)
+        delete animals[i];
+
+//
 //    AAnimal *a = new AAnimal(); //error because AAnimal is abstract class
 //    delete a;
+
+    Dog basic;
+    {
+        Dog tmp = basic;
+    }
 
 
     return 0;

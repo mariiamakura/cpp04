@@ -35,17 +35,24 @@ int main() {
 //    delete cat;
 //    delete dog;
 
-    const Animal *animals[8];
-    for (int i = 0; i < 4; i++)
-        animals[i] = new Dog();
-    for (int i = 4; i < 8; i++)
-        animals[i] = new Cat();
+//    const Animal *animals[8];
+//    for (int i = 0; i < 4; i++)
+//        animals[i] = new Dog();
+//    for (int i = 4; i < 8; i++)
+//        animals[i] = new Cat();
+//
+//    for (int i = 0; i < 8; i++)
+//        std::cout << animals[i]->getType() << std::endl;
+//
+//    animals[2]->makeSound();
+//
+//    for (int i = 0; i < 8; i++)
+//        delete animals[i];
 
-    for (int i = 0; i < 8; i++)
-        std::cout << animals[i]->getType() << std::endl;
-
-    for (int i = 0; i < 8; i++)
-        delete animals[i];
+    Dog basic;
+    {
+        Dog tmp = basic;
+    }
 
     return 0;
 }
